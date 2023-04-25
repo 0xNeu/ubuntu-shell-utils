@@ -37,10 +37,10 @@ sudo systemctl daemon-reload
 sudo systemctl enable --now docker
 sudo systemctl enable --now containerd
 
-echo "${GREEN}>>> Reverting the DNS resolver to original values ${DEFAULT}"
-sudo rm /etc/resolv.conf
-sudo mv /etc/resolv.conf.backup /etc/resolv.conf
-sudo systemctl reload-or-restart systemd-resolved
+# echo "${GREEN}>>> Reverting the DNS resolver to original values ${DEFAULT}"
+# sudo rm /etc/resolv.conf
+# sudo mv /etc/resolv.conf.backup /etc/resolv.conf
+# sudo systemctl reload-or-restart systemd-resolved
 
 echo "${GREEN}<<< Docker Installation Finished. >>>${DEFAULT}"
 newgrp docker
