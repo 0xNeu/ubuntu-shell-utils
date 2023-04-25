@@ -33,7 +33,7 @@ sudo apt install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 echo "${GREEN}>>> Enabling user permissions ${DEFAULT}"
 sudo usermod -aG docker $(whoami)
 
-echo "${GREEN}>> Fixing WSL2 Ubuntu 22.04 quircks ${DEFAULT}"
+echo "${GREEN}>> Fixing WSL2 Ubuntu 22.04 quirks ${DEFAULT}"
 sudo update-alternatives --set iptables /usr/sbin/iptables-legacy
 sudo update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy
 
