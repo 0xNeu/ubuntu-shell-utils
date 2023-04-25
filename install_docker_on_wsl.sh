@@ -14,7 +14,7 @@ sudo apt install -y ca-certificates curl gnupg lsb-release
 
 echo "${GREEN}>>> Temporarily setting the DNS resolver to 403.online ${DEFAULT}"
 sudo cp /etc/resolv.conf /etc/resolv.conf.backup
-sudo sh -c 'echo "10.202.10.202" > /etc/resolv.conf'
+echo "nameserver 10.202.10.202" | sudo tee -a /etc/resolv.conf
 
 echo "${GREEN}>>> Adding Docker GPG keys ${DEFAULT}"
 sudo mkdir -p /etc/apt/keyrings
